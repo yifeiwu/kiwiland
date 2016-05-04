@@ -43,16 +43,16 @@ Output #10: 7
  - You may not use any external libraries to solve this problem, but you may use external libraries or tools for building or testing purposes. Specifically, you may use unit testing libraries or build tools available for your chosen language.
 
 
- ###Discussion
+###Discussion
 
  This is apparently a common thoughtworks interview question to see if you know graph traversal algorithms. This solution is not very well optimized but it should get the job done. In general the idea is to 
 * Get the graph read into a adjacency matrix
 * Generate a list of the different paths based on neighboring nodes to a source node. Depending on the application you can use a BFS to find short routes, but it seems like you kinda have to exhaustively search all the options because a lot of these questions are asking you to sort from the set of all routes. 
 
-####Points to optimize:
+ ####Points to optimize:
 
-* Replace all the loops with Enumerable 
-* Prune out certain steps on specific conditions e.g. for Q10 if a path already exceeds 30 length at stop 2, there's no need to check it's neighbors any further. 
+ * Replace all the loops with Enumerable 
+ * Prune out certain steps on specific conditions e.g. for Q10 if a path already exceeds 30 length at stop 2, there's no need to check it's neighbors any further. 
 
 
 ###Environments
