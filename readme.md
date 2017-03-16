@@ -1,6 +1,6 @@
-#Graph Traversal Interview Question Ruby Implementation
+# Graph Traversal Interview Question Ruby Implementation
 
-###Description
+### Description
 The local commuter railroad services a number of towns in Kiwiland.  Because of monetary concerns, all of the tracks are 'one-way’. That is, a route from Kaitaia to Invercargill does not imply the existence of a route from Invercargill to Kaitaia. In fact, even if both of these routes do happen to exist, they are distinct and are not necessarily the same distance!
 
 The purpose of this problem is to help the railroad provide its customers with information about the routes. In particular, you will compute the distance along a certain route, the number of different routes between two towns, and the shortest route between two towns.
@@ -43,32 +43,32 @@ Output #10: 7
  - You may not use any external libraries to solve this problem, but you may use external libraries or tools for building or testing purposes. Specifically, you may use unit testing libraries or build tools available for your chosen language.
 
 
-###Discussion
+### Discussion
 
  This is apparently a common thoughtworks interview question to see if you know graph traversal algorithms. This solution is not very well optimized but it should get the job done. In general the idea is to 
 * Get the graph read into a adjacency matrix
 * Generate a list of the different paths based on neighboring nodes to a source node. Depending on the application you can use a BFS to find short routes, but it seems like you kinda have to exhaustively search all the options because a lot of these questions are asking you to sort from the set of all routes. 
 
- ####Points to optimize:
+ #### Points to optimize:
 
  * Replace all the loops with Enumerable 
  * Prune out certain steps on specific conditions e.g. for Q10 if a path already exceeds 30 length at stop 2, there's no need to check it's neighbors any further. 
 
 
-###Environments
+### Environments
 Code was developed on Ubuntu 14.04 x86_64 but should work on any machine with Ruby 2.0+
 ###System Dependencies and Config:
 * ruby => 2.0
 * rspec => 3.3.2 (for testing)
 * pretty print for outputs
 
-###Installation
+### Installation
 Assuming you have the relevant dependencies installed, there is no additional installation needed.
-###Operation 
+### Operation 
 `ruby graph_wrapper.rb test.data` 
 
-###Testing
+### Testing
 `rspec graph_spec.rb`
-###License
+### License
 MIT
 
